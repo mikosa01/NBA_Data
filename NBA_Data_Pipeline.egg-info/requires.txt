@@ -1,0 +1,10 @@
+numpy
+pandas
+pyspark
+scikit-learn
+
+[dev]
+codecov
+flake8
+pytest
+pytest-cov
