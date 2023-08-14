@@ -14,6 +14,24 @@ input_url="https://free-nba.p.rapidapi.com/teams"
 
 
 def request (url, header): 
+    """
+    Fetches data from a paginated API endpoint and aggregates the results.
+
+    This function makes sequential requests to a paginated API endpoint, retrieving data
+    from each page and aggregating it into a single list. It handles HTTP errors and
+    combines data from multiple pages into a single result.
+
+    Args:
+        url (str): The URL of the paginated API endpoint.
+        header (dict): A dictionary containing the headers to be included in the request.
+
+    Returns:
+        list: A list containing all the aggregated data from the paginated API.
+        
+    Raises:
+        Any exceptions raised during the HTTP requests are propagated.
+
+    """
     all_data = []
     for i in range(1, 3):
         querystring = {"page":i}
