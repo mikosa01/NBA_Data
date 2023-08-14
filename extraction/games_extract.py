@@ -59,15 +59,6 @@ def FileLocation(all_data, raw_path, filename):
 
     Returns:
         None
-
-    Example:
-        all_data = [{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}]
-        raw_path = "/path/to/json/files"
-        filename = "data"
-        csv_path1 = "/path/to/csv/files"
-        FileLocation(all_data, raw_path, filename, csv_path1)
-        
-        # This will create 'data.json' in 'raw_path' and 'data.csv' in 'csv_path1'.
     """
     if not os.path.exists(raw_path):
         os.makedirs(raw_path)
@@ -98,16 +89,6 @@ def run(filename):
 
     Returns:
         None
-
-    Example:
-        input_url = "https://example-api.com/data"
-        header = {"Authorization": "Bearer <token>"}
-        json_path = "/path/to/json/files"
-        filename = "data"
-        run(filename)
-
-        # This will fetch data from the API, save it as 'data.json' in 'json_path',
-        # and convert it to 'data.csv' in 'csv_path1' (as defined in the FileLocation function).
     """
     raw_json = request(input_url, header)
     output_file = FileLocation(raw_json, json_path, filename)
