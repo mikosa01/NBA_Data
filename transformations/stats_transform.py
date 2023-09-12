@@ -58,7 +58,8 @@ def efficient_field_goal(data):
 
 def true_shooting(data):
     return data.withColumn('TS%', \
-                        ((0.5 * col('pts'))/( col('fga') + 0.44 * col('fta')))*100)
+                        ((0.5 * col('pts'))/
+                         ( col('fga') + 0.44 * col('fta')))*100)
          
 def offensive_rebound(data, col1, col2):
     return data.withColumn('oreb', col(col1) - col(col2))

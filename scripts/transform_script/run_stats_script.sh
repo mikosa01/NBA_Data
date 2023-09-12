@@ -8,8 +8,8 @@ SPARK_HOME="$(dirname $(dirname $SPARK_SUBMIT_PATH))"
 
 $POETRY_EXECUTABLE build
 
-INPUT_FILE_PATH="/home/mikosa/NBA_Data/resources/raw_data/json/stats/stats.json"
-OUTPUT_PATH="/home/mikosa/NBA_Data/resources/clean_data/stats/"
+INPUT_FILE_PATH="/home/mikosa/NBA_Data/resources/raw_data/json/stats/deployment/stats.json"
+OUTPUT_PATH="/home/mikosa/NBA_Data/resources/clean_data/deployment/"
 JOB="/home/mikosa/NBA_Data/job/save_clean_stats.py"
 
 rm -rf $OUTPUT_PATH

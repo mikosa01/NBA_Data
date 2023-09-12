@@ -4,7 +4,7 @@ import requests
 import csv 
 
 
-json_path='/home/mikosa/NBA_Data/resources/raw_data/json/stats'
+json_path='/home/mikosa/NBA_Data/resources/raw_data/json/stats/stats'
 csv_path1 ='/home/mikosa/NBA_Data/resources/raw_data/csv/'
 
 
@@ -28,7 +28,7 @@ def request (url, header):
 
     """
     all_data = []
-    for i in range(0, 120):
+    for i in range(150, 200):
         querystring = {"page":i, "per_page":100}
         response = requests.get(url, headers=header, params=querystring)
         if response.status_code == 200:
